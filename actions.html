@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actions Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Optional Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .dashboard-header {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="jumbotron">
+    <h1 class="display-4">Hello, Production Team!</h1>
+    <p class="lead">This is a simple dashboard for monitoring the all the open action items in your value stream.</p>
+    <hr class="my-4">
+</div>
+
+<div class="container-fluid">
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-5">47.5 Hours due this week</h1>
+                    <p class="lead">There are <strong>47.5</strong> Resource Hours due this week on the bottleneck resource.</p>
+                    <hr class="my-4">
+                    <p>Talk with your supervisor about the plan to complete these hours before the end of the week.</p>
+                    <button class="btn btn-primary btn-sm" onclick="copyLink()">Print Table</button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Job #</th>
+                            <th scope="col">Item #</th>
+                            <th scope="col">SS Quantity</th>
+                            <th scope="col">ATR Quantity</th>
+                            <th scope="col">Item Description</th>
+                            <th scope="col">Quantity Remaining</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">Complete Date</th>
+                            <th scope="col">Resource Hours</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">3170001</a></td>
+                            <td><a href="#">09999</a></td>
+                            <td>500</td>
+                            <td>450</td>
+                            <td>Aluminum Sheet</td>
+                            <td>50</td>
+                            <td>2024-03-01</td>
+                            <td>2024-03-10</td>
+                            <td>120</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>     
+                        <tr>
+                            <td><a href="#">3170002</a></td>
+                            <td><a href="#">10000</a></td>
+                            <td>490</td>
+                            <td>441</td>
+                            <td>Aluminum Sheet</td>
+                            <td>49</td>
+                            <td>2024-03-02</td>
+                            <td>2024-03-11</td>
+                            <td>122</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">3170003</a></td>
+                            <td><a href="#">10001</a></td>
+                            <td>480</td>
+                            <td>432</td>
+                            <td>Aluminum Sheet</td>
+                            <td>48</td>
+                            <td>2024-03-03</td>
+                            <td>2024-03-12</td>
+                            <td>124</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">3170020</a></td>
+                            <td><a href="#">10018</a></td>
+                            <td>310</td>
+                            <td>279</td>
+                            <td>Aluminum Sheet</td>
+                            <td>31</td>
+                            <td>2024-03-20</td>
+                            <td>2024-03-29</td>
+                            <td>158</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">3170002</a></td>
+                            <td><a href="#">10000</a></td>
+                            <td>490</td>
+                            <td>441</td>
+                            <td>Aluminum Sheet</td>
+                            <td>49</td>
+                            <td>2024-03-02</td>
+                            <td>2024-03-11</td>
+                            <td>122</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">3170003</a></td>
+                            <td><a href="#">10001</a></td>
+                            <td>480</td>
+                            <td>432</td>
+                            <td>Aluminum Sheet</td>
+                            <td>48</td>
+                            <td>2024-03-03</td>
+                            <td>2024-03-12</td>
+                            <td>124</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">3170020</a></td>
+                            <td><a href="#">10018</a></td>
+                            <td>310</td>
+                            <td>279</td>
+                            <td>Aluminum Sheet</td>
+                            <td>31</td>
+                            <td>2024-03-20</td>
+                            <td>2024-03-29</td>
+                            <td>158</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">3170002</a></td>
+                            <td><a href="#">10000</a></td>
+                            <td>490</td>
+                            <td>441</td>
+                            <td>Aluminum Sheet</td>
+                            <td>49</td>
+                            <td>2024-03-02</td>
+                            <td>2024-03-11</td>
+                            <td>122</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">3170003</a></td>
+                            <td><a href="#">10001</a></td>
+                            <td>480</td>
+                            <td>432</td>
+                            <td>Aluminum Sheet</td>
+                            <td>48</td>
+                            <td>2024-03-03</td>
+                            <td>2024-03-12</td>
+                            <td>124</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">3170020</a></td>
+                            <td><a href="#">10018</a></td>
+                            <td>310</td>
+                            <td>279</td>
+                            <td>Aluminum Sheet</td>
+                            <td>31</td>
+                            <td>2024-03-20</td>
+                            <td>2024-03-29</td>
+                            <td>158</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Transact</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Print Shop Paper</button>
+                            </td>
+                        </tr>           
+                    </tbody>
+                </table>
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-5">3 Red Cards Due</h1>
+                    <p class="lead">You have <strong>3</strong> more red cards due by the end of this month.</p>
+                    <hr class="my-4">
+                    <p>Make sure to complete all observations to maintain a safe working environment and continuous improvement culture.</p>
+                    <button class="btn btn-primary btn-sm" onclick="copyLink()">Copy Link to Form</button>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="https://developers.google.com/static/chart/infographics/images/chart_527.png" alt="QR Code" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-5">27 Open Training Requirements</h1>
+                    <p class="lead">Your safety training compliance is <strong>98.1%</strong>.</p>
+                    <hr class="my-4">
+                    <p>Make sure to complete all training requirements Click the button below to see details.</p>
+                    <button class="btn btn-primary btn-sm" onclick="copyLink()">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-5">0 Open Quality Alerts</h1>
+                    <p class="lead">You have <strong>0</strong> open quality alerts, Great Work!</p>
+                    <hr class="my-4">
+                    <button class="btn btn-primary btn-sm" onclick="copyLink()">View Quality Alert Actions</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-5">Markets</h1>
+                    <p class="lead">Your markets are <strong>48%</strong> full.</p>
+                    <hr class="my-4">
+                    <p>Talk with your suppliers to bump these numbers up to 100%.</p>
+                    <button class="btn btn-primary btn-sm" onclick="copyLink()">Print Table</button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <table class="table table-striped table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Item #</th>
+                            <th scope="col">Market Quantity</th>
+                            <th scope="col">On Hand Quantity</th>
+                            <th scope="col">Item Description</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">80001234</a></td>
+                            <td>10000</td>
+                            <td>6541</td>
+                            <td>Boxes</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Email Kyle Neugebauer</button>
+                            </td>
+                        </tr>     
+                        <tr>
+                            <td><a href="#">70009999</a></td>
+                            <td>60000</td>
+                            <td>38145</td>
+                            <td>Labels</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Email Kyle Neugebauer</button>
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td><a href="#">80000001</a></td>
+                            <td>500</td>
+                            <td>450</td>
+                            <td>Screws</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Email Kyle Neugebauer</button>
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td><a href="#">84840000</a></td>
+                            <td>2500</td>
+                            <td>1250</td>
+                            <td>Metal</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Email Nathan Hoffman</button>
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td><a href="#">84840001</a></td>
+                            <td>3000</td>
+                            <td>600</td>
+                            <td>Vinyl</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm">Email Rob McLauglin</button>
+                            </td>
+                        </tr>   
+                    </tbody>
+                </table>
+                </div>
+    
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
